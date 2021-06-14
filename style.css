@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+:root{
+    --clr-dark-cyan:hsl(185, 75%, 39%);
+    --cle--very-dark-blue: hsl(229, 23%, 23%);
+    --clr-dark-greyish-blue: hsl(227, 10%, 46%);
+    --clr-dark-grey: hsl(0, 0%, 59%);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+}
+
+body{
+    height:100vh;
+    width:100%;
+    overflow:hidden;
+    background-color: var(--clr-dark-cyan);
+    position:relative;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+.top,.bottom{
+    position:absolute;
+}
+.top{
+    transform: translate(-7%,-45%);
+}
+
+.bottom{
+    right:0;
+    bottom:0;
+    transform: translate(7%, 52%)
+}
+
+.card{
+    align-items:center;
+    position: absolute;
+    background-color:white;
+    border:1px solid whitesmoke;
+    box-shadow: 8px 12px 14px rgba(0,0,0,0.3);
+    width:400px;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border-radius:12px;
+}
+
+.card__pattern{
+    background-image: url(./images/bg-pattern-card.svg);
+    background-size:100%;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    position: relative;
+    align-items: center;
+    display: flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    height:135px;
+}
+
+.card__pattern > img {
+    height:100px;
+    width:100px;
+    border-radius:50%;
+    transform: translateY(50%);
+    padding:4px;
+    background-color:white;
+
+}
+
+
+.card__info{
+    margin-top:50px;
+    display: flex;
+    flex-direction:column;
+    height:100px;
+    justify-content:space-evenly;
+    border-bottom: 3px solid whitesmoke;
+}
+
+#name{
+    
+    font-weight:700;
+    margin-right: 10px;
+    font-size:18px;
+
+}
+
+.age,.city,.title{
+    font-weight: 400;
+    color: var(--clr-dark-grey);
+    text-align: center;
+
+}
+.title{
+    font-size:14px;
+    margin:10px;
+}
+
+
+.name-age{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stats{
+    display:flex;
+    justify-content: space-around;
+    height:120px;
+    align-items: center;
+}
+
+.stats_item{
+    text-align: center;
+}
+
+
+
+@media (max-width:675px){
+    .top{
+        transform: translate(-64%, -56%);
+    }
+    
+
+}
